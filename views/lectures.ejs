@@ -1,0 +1,35 @@
+<%- include('header') -%>
+
+  <header class="heading heading--main">
+    <span class="heading__category">Vefforritun</span>
+    <h1 class="heading__title">Fyrirlestrar</h1>
+  </header>
+  <main>
+    <div class="list">
+      <div class="list__row">
+        <% lectures.forEach((lecture) => { %>
+          <div class="list__col">
+            <a href="/<%= lecture.slug %>" class="listItem">
+              <div class="listItem__image <%= !lecture.image ? 'listItem__image--empty' : '' %>">
+                <% if (lecture.thumbnail) { %>
+                  <img src="<%= lecture.thumbnail %>" alt="">
+                <% } %>
+              </div>
+              <div class="listItem__bottom">
+                <div class="listItem__texts">
+                  <span class="listItem__category">
+                    <%= lecture.category %>
+                  </span>
+                  <h2 class="listItem__title">
+                    <%= lecture.title %>
+                  </h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </main>
+
+<%- include('footer') -%>

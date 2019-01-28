@@ -1,0 +1,25 @@
+{
+  "name": "v1-synilausn",
+  "version": "1.0.0",
+  "description": "v10",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "eslint": "eslint *.js lib",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsdom": "^13.1.0"
+  }
+}
